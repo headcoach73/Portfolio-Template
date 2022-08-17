@@ -7,6 +7,7 @@ export default function ProjectImageCard(props) {
             <Card className={props.className && props.className}>
                 <Card.Img src={props.src} />
                 <Card.ImgOverlay />
+                {props.title ? <p style={{textAlign: "center", width: "100%"}}>{props.title}</p> : <></>}
             </Card>
         </div>
     )

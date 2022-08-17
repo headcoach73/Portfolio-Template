@@ -1,9 +1,9 @@
-:root { --time: 0.707s; } // idk what this does but it's required to make this work lol
+:root { --time: 0.507s; } // idk what this does but it's required to make this work lol
 
 .project-flip-card {
     perspective: 40rem;
     display: flex;
-    transition: z-index, transform calc(var(--time) / 4);
+    transition: z-index, opacity calc(var(--time) / 4);
     transition-delay: var(--time), 0s;
     text-decoration: none;
     color: inherit;
@@ -42,10 +42,11 @@
   flex: 1;
   display: flex;
   transform-style: preserve-3d;
-  transition: var(--time) transform;
 
   .project-flip-card:hover &, .project-flip-card:focus & {
-    transform: rotateX(-180deg);
+    .project-card-back {
+      opacity: 0.75;
+    }
   }
 
   .project-card-front {
@@ -59,7 +60,8 @@
   }
   
   .project-card-back {
-    transform: rotateX(-180deg) translate(-100%, 0);
+    transform: translate(-100%, 0);
+    opacity: 0;
     flex-direction: column;
     padding: 20px;
     justify-content: space-around;
@@ -76,5 +78,6 @@
     margin: 0px;
     text-align: center;
     justify-content: center;
+    transition: var(--time) opacity;
   }
 }

@@ -12,7 +12,12 @@ import Header from "./components/Header";
 import Projects from "./components/pages/Projects";
 
 // Project components
-import ExampleProject from "./components/projects/ExampleProject";
+import UntamedIsles from "./components/projects/UntamedIsles";
+import Door9 from "./components/projects/Door9";
+import BillsBussinBuffet from "./components/projects/BillsBussinBuffet";
+import BuildSystem from "./components/projects/BuildSystem";
+import SpaceWars from "./components/projects/SpaceWars";
+import UntitledProject from "./components/projects/UntitledProject";
 
 // Font awesome setup
 const iconList = Object.keys(Icons)
@@ -37,7 +42,12 @@ export default function App() {
               <Route path="/projects" exact component={() => <Projects />} />
 
               {/* Projects */}
-              <Route path="/projects/example" exact component={() => <ExampleProject />} />
+              <Route path="/projects/build-system" exact component={() => <BuildSystem />} />
+              <Route path="/projects/space-wars" exact component={() => <SpaceWars />} />
+              <Route path="/projects/untitled-project" exact component={() => <UntitledProject />} />
+              <Route path="/projects/untamed-isles" exact component={() => <UntamedIsles />} />
+              <Route path="/projects/door9" exact component={() => <Door9 />} />
+              <Route path="/projects/bills-bussin-buffet" exact component={() => <BillsBussinBuffet />} />
             </Switch>
           </Row>
         </Container>
