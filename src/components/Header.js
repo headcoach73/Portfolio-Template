@@ -22,6 +22,9 @@ export default function Header() {
                         <Nav>
                             <Nav.Link exact as={NavLink} to="/projects" isActive={() => ['/', '/projects'].includes(pathname)} className="nav-item">Projects</Nav.Link>
                         </Nav>
+                        <Nav>
+                            <Nav.Link exact as={NavLink} to="/contact" isActive={() => ['/', '/contact'].includes(pathname)} className="nav-item">Contact</Nav.Link>
+                        </Nav>
                     </Navbar.Collapse>
                 </Row>
             </Navbar>

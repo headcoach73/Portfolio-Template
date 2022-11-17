@@ -10,6 +10,7 @@ import Header from "./components/Header";
 
 // Nav page components
 import Projects from "./components/pages/Projects";
+import Contact from "./components/pages/Contact";
 
 // Project components
 import UntamedIsles from "./components/projects/UntamedIsles";
@@ -18,6 +19,7 @@ import BillsBussinBuffet from "./components/projects/BillsBussinBuffet";
 import BuildSystem from "./components/projects/BuildSystem";
 import SpaceWars from "./components/projects/SpaceWars";
 import UntitledProject from "./components/projects/UntitledProject";
+import Amebois from "./components/projects/Amebois";
 
 // Font awesome setup
 const iconList = Object.keys(Icons)
@@ -40,6 +42,7 @@ export default function App() {
             <Switch>
               <Route path="/" exact component={() => <Projects />} />
               <Route path="/projects" exact component={() => <Projects />} />
+              <Route path="/contact" exact component={() => <Contact />} />
 
               {/* Projects */}
               <Route path="/projects/build-system" exact component={() => <BuildSystem />} />
@@ -47,6 +50,7 @@ export default function App() {
               <Route path="/projects/untitled-project" exact component={() => <UntitledProject />} />
               <Route path="/projects/untamed-isles" exact component={() => <UntamedIsles />} />
               <Route path="/projects/door9" exact component={() => <Door9 />} />
+              <Route path="/projects/amebois" exact component={() => <Amebois />} />
               <Route path="/projects/bills-bussin-buffet" exact component={() => <BillsBussinBuffet />} />
             </Switch>
           </Row>

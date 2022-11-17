@@ -52,7 +52,7 @@ export default function UntamedIsles() {
                         <Col>
                             <ProjectVideoCard src="/videos/untamed-isles/untamedcombat.mp4" type="video/mp4" muted="true"/>
                             <ProjectTextCard>
-                                <h2>Features</h2>
+                                <h2>My Features</h2>
                                 <br />
                                 <li><b>Player Movement:</b> movement was networked and supports networked moving platforms, made using extendable state machine</li>
                                 <br />

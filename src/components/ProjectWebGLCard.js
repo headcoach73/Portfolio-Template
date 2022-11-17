@@ -14,7 +14,7 @@ export default function ProjectWebGLCard(props) {
     return (
         <div className="project-web-gl-card" style={{aspectRatio: aspectRatio}}>
             <AutoScale>
-                <iframe frameBorder="0" style={iframeStyle} title="Game Embed Card" src={props.url} allowFullScreen="" width="100%" height="100%"/>
+                <iframe frameBorder="0" style={iframeStyle} title="Game Embed Card" src={props.url} allowFullScreen="true" width="100%" height="100%"/>
             </AutoScale>
         </div>
     )
