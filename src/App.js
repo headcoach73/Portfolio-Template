@@ -20,6 +20,8 @@ import BuildSystem from "./components/projects/BuildSystem";
 import SpaceWars from "./components/projects/SpaceWars";
 import UntitledProject from "./components/projects/UntitledProject";
 import Amebois from "./components/projects/Amebois";
+import CharacterController from "./components/projects/CharacterController";
+import PlanetGeneration from "./components/projects/PlanetGeneration";
 
 // Font awesome setup
 const iconList = Object.keys(Icons)
@@ -46,6 +48,8 @@ export default function App() {
 
               {/* Projects */}
               <Route path="/projects/build-system" exact component={() => <BuildSystem />} />
+              <Route path="/projects/character-controller" exact component={() => <CharacterController />} />
+              <Route path="/projects/planet-generation" exact component={() => <PlanetGeneration />} />
               <Route path="/projects/space-wars" exact component={() => <SpaceWars />} />
               <Route path="/projects/untitled-project" exact component={() => <UntitledProject />} />
               <Route path="/projects/untamed-isles" exact component={() => <UntamedIsles />} />
