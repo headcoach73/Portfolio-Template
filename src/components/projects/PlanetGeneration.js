@@ -17,7 +17,8 @@ export default function PlanetGeneration() {
                                 <h5>Status: MVP, WIP to Feature Complete</h5>
                                 <br />
                                 <h3>Summary</h3>
-                                <p>Quadtree Planet mesh created at runtime using procedural mesh generation at planetary scales.</p>
+                                <p>The Quadtree Planet mesh was dynamically generated at runtime through the utilization of procedural mesh generation techniques,
+                                    allowing for the creation of planetary-scale structures.</p>
                             </ProjectTextCard>
                         </Col>
                     </Row>
@@ -27,19 +28,23 @@ export default function PlanetGeneration() {
                             <ProjectTextCard>
                                 <h2>Challanges</h2>
                                 <br />
-                                <li><b>Seam Handling:</b> When going from a higher LOD to a lower LOD gaps mesh can be seen, 
-                                    dealing this is tricky first of all QuadTreeNodes need to know if their neighbour is at a lower depth requiring a fancy neighbour finding algorithm.
-                                    This alogrithm was made even more complex as it had to handle finding neighbours across edges of the cube-sphere used to make the planet.
+                                <li><b>Seam Handling:</b> Seam handling is a complex task that involves addressing visible gaps in 
+                                    the mesh when transitioning from a higher level of detail (LOD) to a lower LOD. To achieve this, 
+                                    QuadTreeNodes must be able to detect whether their neighboring nodes are at a lower depth level, 
+                                    requiring a sophisticated neighbor-finding algorithm. This process is further complicated when dealing 
+                                    with edges of the cube-sphere used in the planet's construction, as the algorithm must be capable of 
+                                    locating neighbors across these boundaries.
                                 </li>
                                 <br />
-                                <li><b>Normals:</b> A particular big challange was calculating normals for vertices that lay at the edge of each mesh chunk. 
-                                    Every mesh chunk or PlanetFace would required a map of its neighbours and their relative orientation 
-                                    so that edge vertices could find their neighbours in O(1) time. </li>
+                                <li><b>Normals:</b> Calculating normals for vertices located at the edges of mesh chunks posed a significant challenge. 
+                                    To accomplish this task, each mesh chunk, or PlanetFace, required a map of its neighboring faces and their relative orientation.
+                                    With this map, edge vertices could easily locate their neighbors in O(1) time, ensuring efficient normal calculation. </li>
                                 <br />
-                                <li><b>Editor Functionality:</b> Unreal engine likes rebuild an actor everytime its moved or its values changed in the details panel. 
-                                    This force my planet meshes to be rebuilt everytime you tried to modify a parameter, which was a very slow workflow. 
-                                    To overcome this I prevented the UnregisterAll from unregistering my MeshChunk components and 
-                                    used meta UPROPERTY() specifier to add tags that instruct what properties being changed needed to result in a mesh rebuild</li>
+                                <li><b>Editor Functionality:</b> By default, Unreal Engine rebuilds an actor every time it is moved or its values are changed in the details panel, 
+                                    which caused significant slowdowns for modifying parameters in my planet meshes. To address this issue, 
+                                    I implemented a solution that prevented the UnregisterAll function from unregistering my MeshChunk components. 
+                                    Additionally, I utilized the meta UPROPERTY() specifier to add tags that specified which changed properties required a mesh rebuild. 
+                                    This approach greatly improved my workflow efficiency when making adjustments to my planet meshes in the editor.</li>
                             </ProjectTextCard>
                             <ProjectImageCard src="/images/planet-generation/PlanetSettings.png" title="Details panel for planet settings, 
                     classes that inherit from UProceduralPlanetCalculationBase and override ModifyHeight() can be added here, 
@@ -52,12 +57,18 @@ export default function PlanetGeneration() {
                             <ProjectTextCard>
                                 <h2>Features</h2>
                                 <br />
-                                <li><b>Dynamic Level of Detail:</b> Mesh is updated at runtime to roughly maintain a constant triangle density on screen</li>
+                                <li><b>Dynamic Level of Detail:</b> One of the key features of my project is dynamic level of detail, 
+                                    which involves updating the mesh at runtime to maintain a consistent triangle density on the screen. 
+                                    This technique ensures that the level of detail is optimized for the current view, 
+                                    enhancing the visual quality of the planet while improving performance.</li>
                                 <br />
-                                <li><b>Runtime Procedural Generation:</b> To make a mesh that scales to planetary size the mesh data must be procedurally generated at runtime, 
-                                    traditional methods of storing mesh data would be too large for big planets</li>
+                                <li><b>Runtime Procedural Generation:</b> An important feature of my project is the ability to generate procedural mesh data at runtime, 
+                                    which is necessary for creating planets that can scale to massive sizes. Traditional methods of storing mesh data would be 
+                                    prohibitively large for such large-scale structures, making procedural generation a critical technique for efficient and scalable mesh creation.</li>
                                 <br />
-                                <li><b>Editor Previewing:</b> The planet can be previewed in the viewport to support level building and fast procedural generation tweaking.</li>
+                                <li><b>Editor Previewing:</b> My project includes an editor previewing feature, which allows the planet to be viewed in the viewport for the purpose of 
+                                    supporting level building and efficient procedural generation tweaking. This functionality enhances the workflow of the project by enabling designers 
+                                    and developers to make adjustments and optimize the planet's appearance in real time, resulting in a more streamlined and effective development process.</li>
                             </ProjectTextCard>
                             <ProjectImageCard src="/images/planet-generation/MaterialLayers.png" title="For the planets material I used material layers 
                             to blend between textures based on noise, height and slope angle."/>

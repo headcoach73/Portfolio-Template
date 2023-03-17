@@ -17,7 +17,10 @@ export default function CharacterController() {
                                 <h5>Status: Functionally Feature Complete</h5>
                                 <br />
                                 <h3>Summary</h3>
-                                <p>Character Controller built from scratch to support easily customizeable movement mechanics and networked with client-side prediction.</p>
+                                <p>I created a custom character controller for Unreal Engine that enables flexible customization of movement mechanics, 
+                                    while also incorporating networking with client-side prediction. This approach ensures that the movement of the character 
+                                    is smooth and responsive in multiplayer environments, making it server-authoritative. The result is a reliable and highly 
+                                    customizable solution for character control in Unreal Engine-based games and applications.</p>
                             </ProjectTextCard>
                         </Col>
                     </Row>
@@ -27,16 +30,24 @@ export default function CharacterController() {
                             <ProjectTextCard>
                                 <h2>Challanges</h2>
                                 <br />
-                                <li><b>Up was always World Z axis:</b> The CharacterMovementComponent in unreal makes the assumption that up is always the same direction, (0,0,1) in world space. 
-                                    This isn't very flexible and prevents using custom gravity directions for use cases like creating a planet. </li>
+                                <li><b>Custom gravity direction support:</b> One of the main challenges I faced while developing the character controller 
+                                    was the assumption made by Unreal Engine's CharacterMovementComponent that up is always aligned with the World Z axis,
+                                    specifically the vector (0,0,1) in world space. This lack of flexibility made it difficult to implement custom gravity 
+                                    directions, such as those required for planet creation. Overcoming this challenge required implementing a custom solution
+                                    that could support gravity in any direction, enabling greater creative freedom and more diverse gameplay options.</li>
                                 <br />
-                                <li><b>Unreals builtin CharacterMovementComponent:</b> Unreals builtin character movement component is a big class containing, 
-                                    kinematic movement collision handling, movement logic, clientside prediction and more, all coupled together. This was near impossible to work with,
-                                    which lead to my decision to build my own solution from scratch
+                                <li><b>Complex CharacterMovementComponent implementation:</b> The built-in CharacterMovementComponent in Unreal Engine proved to be 
+                                    a significant challenge due to its size and complexity. The class combines several features, including kinematic movement,
+                                    collision handling, movement logic, and client-side prediction, which made it difficult to work with effectively. In light 
+                                    of these challenges, I made the decision to create my own solution from scratch, allowing for greater flexibility and more 
+                                    efficient implementation of the required features.
                                 </li>
                                 <br />
-                                <li><b>Nothing could be reused:</b> Since unreals movement logic was all in one class, I couldn't reuse any of it and needed to build my own logic for Kinematic Controller collisions, 
-                                    Movement logic itself such as running, gravity, jumping, sprinting and client side prediction.</li>
+                                <li><b>Lack of Reusability:</b> A significant challenge I encountered while developing the character controller was the inability
+                                    to reuse any of Unreal Engine's built-in movement logic. Due to the all-in-one implementation of the CharacterMovementComponent,
+                                    I had to create my own logic for kinematic controller collisions and movement mechanics such as running, gravity, jumping, sprinting,
+                                    and client-side prediction. This process required significant effort and expertise, but ultimately resulted in a more efficient and
+                                    flexible solution for character control in Unreal Engine-based games and applications.</li>
                             </ProjectTextCard>
                             <ProjectImageCard src="/images/character-controller/MovementReplication.gif" title="Movement Replication from one client to another"/>
                             <ProjectImageCard src="/images/character-controller/TemplatedCSP.png" title="Used templates for my base Clientside Prediction class 
@@ -52,12 +63,18 @@ export default function CharacterController() {
                             <ProjectTextCard>
                                 <h2>Features</h2>
                                 <br />
-                                <li><b>Client Side Prediciton:</b> Controller is completely server authoritive with client side prediction and a snapshot buffer system to handle replicating movement to remote clients</li>
+                                <li><b>Client Side Prediciton:</b> Character controller includes client-side prediction
+                                    and a snapshot buffer system, ensuring that the controller is completely server-authoritative. This feature allows 
+                                    for smooth and responsive movement in multiplayer environments by replicating movement to remote clients in real-time.
+                                </li>
                                 <br />
-                                <li><b>Easily Customizable and Extendable Movement logic:</b> Easily customizable movement states, and movement components to handling creating complex movement logic. 
-                                    Examples controller uses Ground and Air States, along with Gravity and Jump components. </li>
+                                <li><b>Customizable Movement Logic:</b> Character controller offers customizable movement states and components, 
+                                    making it easy to create complex movement logic. For instance, the controller uses ground and air states, as well as gravity and jump components.
+                                    These features enable developers to extend and modify movement mechanics to suit the needs of their games and applications.
+                                </li>
                                 <br />
-                                <li><b>Base Kinematic Character Controller logic:</b> A base controller handles, collisions, ground snapping, grounding, stephandling to create a responsive character movement experience</li>
+                                <li><b>Kinematic Controller Logic:</b> The character controller includes a base controller that handles collisions, 
+                                    ground snapping, grounding, and step handling. These features work together to create a responsive and immersive movement experience for the character.</li>
                             </ProjectTextCard>
                             <ProjectImageCard src="/images/character-controller/MovementReconciliation.gif" title="Movement Reconciliation, 
                             one client has an object moved to a different location than the server to demonstrate reconciling and server authority"/> 
