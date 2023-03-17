@@ -6,7 +6,7 @@ export const projects =
     {
         key:"planet-generation",
         description:"QuadTree Runtime PlanetMesh Generation (2023)",
-        image: "/images/build-system/build-system-icon-unreal.png",
+        image: "/images/planet-generation/planet-generation-icon-unreal.png",
         slug: "planet-generation",
         group: "Unreal Projects",
         color: "white",
@@ -14,7 +14,7 @@ export const projects =
     {
         key:"character-controller",
         description:"CSP Character Controller from scratch (2022)",
-        image: "/images/build-system/build-system-icon-unreal.png",
+        image: "/images/character-controller/character-controller-icon-unreal.png",
         slug: "character-controller",
         group: "Unreal Projects",
         color: "white",
@@ -32,7 +32,7 @@ export const projects =
         description:"Space Wars - Multiplayer FPS Prototype (2022)",
         image: "/images/space-wars/space-wars-icon-unity.png",
         slug: "space-wars",
-        group: "Unity Projects",
+        group: "Older Projects",
         color: "white",
     },
     {
@@ -40,7 +40,7 @@ export const projects =
         description:"Untitled Project - Multiplayer Adventure RPG (2020)",
         image: "/images/untitled-project/untitled-project-icon-unity.png",
         slug: "untitled-project",
-        group: "Unity Projects",
+        group: "Older Projects",
         color: "white",
     },
     // -------- Game Jams --------
@@ -77,13 +77,21 @@ export const projects =
         group: "Industry",
         color: "white",
     },
+    {
+        key:"unannounced-project",
+        description:"Unannounced Project - Auto Battle-Royal (2023)",
+        image: "/images/untamed-isles/untamed-isles-icon-unity.png",
+        slug: "unannounced-project",
+        group: "Industry",
+        color: "white",
+    },
 ];
 
 export const groups =
     [
         {
             key: "Industry",
-            prio: 3,
+            prio: 4,
         },
         {
             key: "Game Jams",
@@ -94,7 +102,7 @@ export const groups =
             prio: 3,
         },
         {
-            key: "Unity Projects",
-            prio: 2,
+            key: "Older Projects",
+            prio: 0,
         },
     ];

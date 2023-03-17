@@ -22,6 +22,7 @@ import UntitledProject from "./components/projects/UntitledProject";
 import Amebois from "./components/projects/Amebois";
 import CharacterController from "./components/projects/CharacterController";
 import PlanetGeneration from "./components/projects/PlanetGeneration";
+import UnannouncedProject from "./components/projects/UnannouncedProject";
 
 // Font awesome setup
 const iconList = Object.keys(Icons)
@@ -49,6 +50,7 @@ export default function App() {
               {/* Projects */}
               <Route path="/projects/build-system" exact component={() => <BuildSystem />} />
               <Route path="/projects/character-controller" exact component={() => <CharacterController />} />
+              <Route path="/projects/unannounced-project" exact component={() => <UnannouncedProject />} />
               <Route path="/projects/planet-generation" exact component={() => <PlanetGeneration />} />
               <Route path="/projects/space-wars" exact component={() => <SpaceWars />} />
               <Route path="/projects/untitled-project" exact component={() => <UntitledProject />} />
