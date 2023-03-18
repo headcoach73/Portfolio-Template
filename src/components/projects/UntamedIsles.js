@@ -21,9 +21,10 @@ export default function UntamedIsles() {
                                 <h5>Status: Delayed</h5>
                                 <br />
                                 <h3>Summary</h3>
-                                <p>Untamed Isles is Monster taming MMO developed by startup company Phat Loot Studios, the project is currently on hold due to funding issues.</p>
-                                <p>I joined the development team of untamed isles in december 2021, the main features I was responisble for and developed were, Player Movement, NPC Combat AI, NPC General AI.</p>
-                                <p>I was also in charge planning and implementing assembly definitions to enforce stricter code architecture and improve editor performance</p>
+                                <p>Untamed Isles is a Monster taming MMO created by Phat Loot Studios, a startup company. However, the project is currently on hold due to funding issues. 
+                                    As a developer who joined the team in December 2021, I was responsible for creating and developing several main features such as Player Movement, 
+                                    NPC Combat AI, and NPC General AI. Additionally, I oversaw the planning and implementation of assembly definitions to ensure better code architecture 
+                                    and enhance editor performance.</p>
                             </ProjectTextCard>
                         </Col>
                     </Row>
@@ -31,19 +32,15 @@ export default function UntamedIsles() {
                     <Row>
                         <Col>
                             <ProjectTextCard>
-                                <h2>Challanges</h2>
+                                <h2>Challenges Faced</h2>
                                 <br />
-                                <li><b>Handling Technical Debt:</b> Untamed Isles was a prototype that quickly shifted into production development,
-                                    this resulted in a large amount of technical debt that I spent alot of time dealing with.</li>
+                                <li><b>Managing Technical Debt:</b> As Untamed Isles transitioned from a prototype to production development, it accumulated a significant amount of technical debt that required significant effort to handle.</li>
                                 <br />
-                                <li><b>Editor Performance:</b> Untamed Isles was a very large project with a lot of assets and scripts, managing editor performance
-                                    was essential to the productivity of the dev team.</li>
+                                <li><b>Optimizing Editor Performance:</b> With a large number of assets and scripts, ensuring optimal editor performance was crucial to maintaining the productivity of the development team.</li>
                                 <br />
-                                <li><b>Code Architecture:</b> The project went through many changes that required big refactorings of old code, this showed me the importance
-                                    of making good abstractions layers.</li>
+                                <li><b>Refactoring Code Architecture:</b> The project underwent multiple changes that necessitated significant refactoring of existing code, highlighting the importance of creating robust abstraction layers.</li>
                                 <br />
-                                <li><b>Code Standard:</b> Untamed Isles was startup project with a wide range of developer experience and a large number of difficult problems.
-                                    This made maintaining code quality challanging.</li>
+                                <li><b>Maintaining Code Standards:</b> Untamed Isles was a startup project with a diverse range of developer experience and numerous complex problems, making it challenging to maintain high code quality standards.</li>
                             </ProjectTextCard>
                             <ProjectImageCard src="/images/untamed-isles/WanderMap.png" title="Wander AI Map Tool" />
                             <ProjectImageCard src="/images/untamed-isles/combatnpc.png" title="Combat" />
@@ -52,15 +49,15 @@ export default function UntamedIsles() {
                         <Col>
                             <ProjectVideoCard src="/videos/untamed-isles/untamedcombat.mp4" type="video/mp4" muted="true"/>
                             <ProjectTextCard>
-                                <h2>My Features</h2>
+                                <h2>Features Developed</h2>
                                 <br />
-                                <li><b>Player Movement:</b> movement was networked and supports networked moving platforms, made using extendable state machine</li>
+                                <li><b>Player Movement:</b> Implemented a networked player movement system that supports moving platforms and is built using an extendable state machine.</li>
                                 <br />
-                                <li><b>NPC Combat AI:</b> Weighted random choices, customized with generic modifiers to create different AI profiles with a designer friendly tool</li>
+                                <li><b>NPC Combat AI:</b> Designed a system that uses weighted random choices and generic modifiers to create customizable AI profiles with a designer-friendly tool.</li>
                                 <br />
-                                <li><b>NPC General AI:</b> Tools and systems for npcs that wander, chase and battle players.</li>
+                                <li><b>NPC General AI:</b> Developed various tools and systems for NPCs that can wander, chase, and engage in battle with players.</li>
                                 <br />
-                                <li><b>Battle System:</b> Worked in the team responisble for creating the realtime, inworld networked turn based battle system for a mmo.</li>
+                                <li><b>Battle System:</b> Collaborated with the team responsible for creating the real-time, in-world, networked, turn-based battle system for an MMO.</li>
                             </ProjectTextCard>
                             <ProjectImageCard src="/images/untamed-isles/SkillWeightingAI.png" title="Skill Weighting AI Tool" />
                         </Col>
